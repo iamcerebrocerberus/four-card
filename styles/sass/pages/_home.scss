@@ -9,6 +9,11 @@ body{
     display: flex;
     flex-direction: column;
     margin: 5rem 1.5rem;
+
+    @include respond-to("large"){
+        /* #{$loc} */
+        margin: 0;
+    }
 }
 
 .grid-container{
@@ -29,6 +34,7 @@ body{
 }
 
 @include respond-to("large"){
+    /* #{$loc} */
     body{
         justify-content: center;
         align-items: center;

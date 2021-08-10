@@ -1,6 +1,9 @@
 @use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
 
+$loc: "[layouts/footer]";
 .attribution{
+    font-size: pxCon(12,rem);
     text-align: center;
     margin-top: pxCon(38,rem);
     font-weight: 300;
@@ -8,4 +11,18 @@
 
 a{
     text-decoration: none;
+}
+
+
+@include respond-to("large"){
+    /* #{$loc} */
+    .attribution{
+        text-align: center;
+        margin-top: pxCon(38,rem);
+        font-weight: 300;
+    }
+    
+    a{
+        text-decoration: none;
+    }
 }

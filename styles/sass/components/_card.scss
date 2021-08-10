@@ -1,0 +1,62 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
+
+$loc: "[components/card]";
+
+.card{
+    /* #{$loc} */
+    @include color-get(background,primary,"white");
+    padding: pxCon(28,rem);
+    display: flex;
+    flex-direction: column;
+    @include box-sha(primary,vr-dar-blu);
+
+    &__head{
+        /* #{$loc} */
+        font-size: 1.3rem;
+    }
+
+    &__txt{
+        /* #{$loc} */
+        font-size: .9rem;
+        @include color-get(color,Neutral,"vr-dar-blu");
+        margin-top: .4rem;
+        line-height: 2;
+    }
+
+    img{
+        /* #{$loc} */
+        width: 55px;
+        height: 55px;
+        margin-top: 2.2rem;
+        align-self: flex-end;
+    }
+}
+
+.super{
+    /* #{$loc} */
+    @include bor-col("border-top",primary,"cyan",5px);
+}
+
+.team{
+    /* #{$loc} */
+    @include bor-col("border-top",primary,"red",5px);
+}
+
+.karma{
+    /* #{$loc} */
+    @include bor-col("border-top",primary,"orange",5px);
+}
+
+.calc{
+    /* #{$loc} */
+    @include bor-col("border-top",primary,"blue",5px);
+}
+
+.super,
+.team,
+.karma,
+.calc{
+    /* #{$loc} */
+    border-radius: 6px;
+}

@@ -1,0 +1,54 @@
+@use 'sass:map';
+@use '../abstracts/functions' as *;
+@use '../abstracts/colors' as *;
+@use '../abstracts/breakpoints' as *;
+
+$loc : "[abstracts/mixins]";
+
+@mixin color-get($prop,$key,$val){
+    $color: map-get($colors,$key,$val);
+    #{$prop}: $color;
+}
+
+
+// grid setter for mobile view
+@mixin grid-set-sm(){
+    /* #{$loc} */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: pxCon(20,rem);
+    gap: pxCon(20,rem); 
+}
+
+//grid setter for medium view
+@mixin grid-set-me(){
+    grid-template-columns: repeat(2,1fr);
+}
+
+//grid setter for large view
+@mixin grid-set-lar(){
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-gap: pxCon(34,rem);
+}
+
+
+// border color mixin
+@mixin bor-col($prob,$key,$color,$width){
+    $color: map-get($colors,$key,$color);
+    #{$prob}: $width $color solid;
+}
+
+// box shadow mixin
+@mixin box-sha($key,$color){
+    $color: map-get($colors,$key,$color);
+    box-shadow: 0px 9px 30px -10px $color;
+}
+
+// media query mixin
+@mixin respond-to($viewport){
+    $viewport: pxCon(map-get($breakpoints,$viewport),em);
+    @media screen and (min-width: $viewport){
+        @content;
+    }
+}

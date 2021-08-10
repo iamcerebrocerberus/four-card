@@ -1,0 +1,15 @@
+@use "sass:math";
+
+//px to rem and em convertor
+@function pxCon($value,$unit){
+    $rem : "rem";
+    $em : "em";
+    $value: math.div($value,16); // 1em or rem == 16px
+    @if $value and ($unit == $rem){
+        @return #{$value}rem;
+    }@else if $value and ($unit == $em){
+        @return #{$value}em;
+    }@else {
+        @error "first arg must be only value(px) and second arg must be unit ['rem' or 'em']";
+    }
+}

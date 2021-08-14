@@ -9,7 +9,7 @@ $loc: "[components/card]";
     padding: pxCon(28,rem);
     display: flex;
     flex-direction: column;
-    @include box-sha(primary,vr-dar-blu);
+    @include box-sha(primary,"blue");
 
     &__head{
         /* #{$loc} */

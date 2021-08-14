@@ -20,6 +20,7 @@
   font-size: 1.535rem;
   text-align: center;
   font-weight: 200;
+  opacity: 0.7;
 }
 @media screen and (min-width: 69.375em) {
   .header__head1 {
@@ -31,6 +32,7 @@
   /* [base/typography] */
   font-size: 1.535rem;
   text-align: center;
+  opacity: 0.7;
 }
 @media screen and (min-width: 69.375em) {
   .header__head2 {
@@ -73,7 +75,7 @@
 .card__txt {
   /* [components/card] */
   font-size: 0.9rem;
-  color: #4c4e61;
+  color: #a3a5ae;
   margin-top: 0.4rem;
   line-height: 2;
 }
@@ -117,7 +119,7 @@
   font-size: 0.75rem;
   text-align: center;
   margin-top: 2.375rem;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 a {
@@ -129,7 +131,7 @@ a {
   .attribution {
     text-align: center;
     margin-top: 2.375rem;
-    font-weight: 300;
+    font-weight: 500;
   }
 
   a {

@@ -19,7 +19,7 @@ $loc: "[components/card]";
     &__txt{
         /* #{$loc} */
         font-size: .9rem;
-        @include color-get(color,Neutral,"vr-dar-blu");
+        @include color-get(color,Neutral,"gr-bl");
         margin-top: .4rem;
         line-height: 2;
     }
